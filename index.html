@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>timonezitrone</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <style>
+    #map{
+      height: 85vh;
+      width: 90vw;
+      margin: auto;
+    }
+    .container {
+      display: inline-block;
+      width: 30%;
+      text-align: center;
+      border: 1px solid black;
+      margin-top: 20px;
+    }
+
+  </style>
+
+</head>
+<body>
+<div id="map"></div>
+<div class="container" id="c1">
+  <button id="undoButton" onclick="undoMove()" disabled>undo</button>
+</div>
+<div class="container" id="c2">
+  <label for="userInput" id="turnLabel">It is Blue's turn:</label>
+  <input type="text" id="userInput" autofocus onkeydown="handleKeyDown(event)" autocomplete="off">
+  <button onclick="login()">Go</button>
+  <p id="message"></p>
+</div>
+<div class="container" id="c3">
+</div>
+
+</body>
+</html>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="data.js"></script>
+<script src="testGrid.js">
+</script>
